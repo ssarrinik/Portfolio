@@ -1,3 +1,5 @@
+{% from "bootstrap5/form.html" import render_form %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -50,7 +52,7 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col">
                 <div class="card">
-                    <img src="https://placehold.co/200x100" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='images/a.png')}}" class="card-img-top" alt="...">
                     <div class="card-footer">
                         <h5 class="card-title mb-2">Blog Project</h5>
                         <span class="badge mb-3 px-4 rounded-pill text-light border">Python</span>
@@ -73,7 +75,7 @@
 
             <div class="col">
                 <div class="card">
-                    <img src="https://placehold.co/200x100" class="card-img-top" alt="...">
+                    <img src="{{ url_for('static', filename='images/b.png')}}" class="card-img-top" alt="...">
                     <div class="card-footer">
                         <h5 class="card-title mb-2">Blog Project</h5>
                         <span class="badge mb-3 px-4 rounded-pill text-light border">Python</span>
@@ -189,7 +191,7 @@
   <div class="container marketing text-center poppins-regular">
     <h2 class="text-body-emphasis justify-content-center py-5">What I Bring to the Table</h2>
     <div class="row">
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="card h-100 border-0 shadow-sm text-center py-4 px-3 hover-card">
           <div class="card-body">
             <div class="icon-box bg-primary bg-opacity-10 text-primary mx-auto mb-3">
@@ -205,7 +207,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="card h-100 border-0 shadow-sm text-center py-4 px-3 hover-card">
           <div class="card-body">
             <div class="icon-box bg-success bg-opacity-10 text-success mx-auto mb-3">
@@ -221,7 +223,7 @@
           </div>
         </div>
       </div>
-      <div class="col-lg-4 col-md-6">
+      <div class="col-lg-3 col-md-6">
         <div class="card h-100 border-0 shadow-sm text-center py-4 px-3 hover-card">
           <div class="card-body">
             <div class="icon-box bg-danger bg-opacity-10 text-success mx-auto mb-3">
@@ -239,10 +241,49 @@
           </div>
         </div>
       </div>
+        <div class="col-lg-3 col-md-6">
+        <div class="card h-100 border-0 shadow-sm text-center py-4 px-3 hover-card">
+          <div class="card-body">
+            <div class="icon-box bg-dark bg-opacity-10 text-success mx-auto mb-3">
+              <i class="bi bi-hdd-rack fs-2 text-primary" style="color: $teal-500"></i>
+            </div>
+            <h3 class="card-title fw-bold">Automations</h3>
+            <p class="card-text text-muted mb-4">Analyze complex data and visualize their relationships</p>
+            <div class="d-flex justify-content-center gap-2 flex-wrap">
+              <span class="badge bg-light text-dark border">Python</span>
+              <span class="badge bg-light text-dark border">beautifulsoup4</span>
+              <span class="badge bg-light text-dark border">Selenium Webdrive</span>
+              <span class="badge bg-light text-dark border">PostgreSQL</span>
+
+            </div>
+          </div>
+        </div>
+      </div>
       <!-- /.col-lg-4 -->
     </div>
   </div>
     </section>
+
+
+    <section class="contact mt-5" id="contact-form-2">
+        <div class="container poppins-regular py-5">
+            <div class="row">
+
+                <div class="col-lg-6 col-md-8 text-light">
+                    <h2>Contact Me</h2>
+                        {{ render_form(form, button_map = {'submit': 'steel-blue w-100'}) }}
+                </div>
+
+<!--                <div class="col-lg-6 col-md-8">-->
+<!--                    <img href="">-->
+<!--                </div>-->
+            </div>
+        </div>
+
+
+    </section>
+
+
 
 {% include "footer.html" %}
 

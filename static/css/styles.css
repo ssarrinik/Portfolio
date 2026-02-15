@@ -2,6 +2,21 @@ nav{
     background-color: #446389;
 }
 
+#contact-form-2 {
+    background-color: #446389;
+}
+
+.btn-steel-blue {
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+
+.contact-form {
+    background-color: #446389;
+}
+
 .poppins-regular {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
@@ -14,6 +29,7 @@ nav{
 
 .footer-div {
     background-color: #446389;
+    margin-top: -1px;
 }
 
 .card {
@@ -51,10 +67,17 @@ body {
     justify-content: center;
 }
 
+.card-img-top {
+    width: 100%;            /* Force image to fit the width of the card */
+    height: 200px;          /* Force image to be exactly 200px tall */
+    object-fit: cover;      /* THE MAGIC PART: This crops the image automatically! */
+    object-position: center; /* Optional: Keeps the center of the image visible */
+}
 /* Smooth lift effect on hover */
 .hover-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
 .hover-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
