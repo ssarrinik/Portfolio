@@ -68,12 +68,12 @@ body {
 }
 
 .card-img-top {
-    width: 100%;            /* Force image to fit the width of the card */
-    height: 200px;          /* Force image to be exactly 200px tall */
-    object-fit: cover;      /* THE MAGIC PART: This crops the image automatically! */
-    object-position: center; /* Optional: Keeps the center of the image visible */
+    width: 100%;            
+    height: 200px;         
+    object-fit: cover;     
+    object-position: center; 
 }
-/* Smooth lift effect on hover */
+
 .hover-card {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
