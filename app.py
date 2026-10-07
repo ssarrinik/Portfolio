@@ -34,7 +34,7 @@ def home():
 
 @app.route("/download_cv")
 def download():
-    return send_file("static/stamatis_cv", as_attachment=True)
+    return send_file("static/Stamatis_CV.pdf", as_attachment=True)
 
 if __name__ == "__main__":
     app.run(debug=True)
